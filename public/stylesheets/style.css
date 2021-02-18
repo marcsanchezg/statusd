@@ -84,6 +84,7 @@ button{
 }
 .element{
   width: calc(25% - 40px);
+  min-width: 25rem;
   float: left;
   background-color: white;
   
