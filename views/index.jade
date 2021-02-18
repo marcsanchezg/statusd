@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  //meta(http-equiv='Refresh' content='30')
+  h1.center statusd 
+  p.center A small application to check your favourite services status
+  .grid
+    each daemon in daemons
+      .element
+        h1= daemon['name']
+        p= daemon['address'] + ":" + daemon['port']
+        .status
+          if daemon['status']
+            p.online Online 
+          else 
+            p.offline Offline
+          
+        form(action='/del/#{daemon["id"]}' method='POST')
+          button(type='submit')
+            svg(xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor').delete
+              path(stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16')
+
+    
+    if daemons.length
+      .element
+        form(action="/add" method="POST") 
+          .text
+            input(type="text" name="name" placeholder="Name:")
+            input(type="text" name="address" placeholder="Host:")
+            input(type="text" name="port" placeholder="Port:")
+          input(type="submit" value="Add")
+    else
+      .element.unique
+        form(action="/add" method="POST") 
+            .text
+              input(type="text" name="name" placeholder="Name:")
+              input(type="text" name="address" placeholder="Host:")
+              input(type="text" name="port" placeholder="Port:")
+            input(type="submit" value="Add")
+      

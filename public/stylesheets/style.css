@@ -1,0 +1,108 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+html {
+  box-sizing: border-box;
+}
+
+
+a{
+  color: #00B7FF;
+}
+h1{
+  font-weight: 300;
+  font-size: 32px;
+}
+svg{
+  height: 1.5rem;
+}
+svg.delete{
+  color: gray;
+}
+svg.add{
+  margin-top: 3rem;
+}
+
+.text{
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 65%;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+input{
+  width: calc(100% - 18px);
+  background-color: rgba(0, 0, 0, 0);
+  margin: 0 auto;
+  padding: .5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid lightgrey;
+  border: 0px solid black;
+  text-align: center;
+  font-size: 1rem;
+}
+input:nth-child(2){
+  width: ;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+
+input[type=submit]{
+  border: 0px solid black;
+  padding: .5rem;
+  width: 50%;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  background-color: rgb(52, 100, 243);
+  color: white;
+  transition: background-color .3s;
+}
+input[type=submit]:hover{
+  background-color: rgb(44, 83, 201);
+  transition: background-color .3s;
+}
+button{
+  border: 0px;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+.center{
+  text-align: center;
+}
+.unique{
+  margin: 0 auto !important;
+  float: none !important;
+}
+
+.grid{
+  width: 100%;
+  text-align: center;
+}
+.element{
+  width: calc(25% - 40px);
+  float: left;
+  background-color: white;
+  
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 2rem;
+  margin: 20px;
+  min-height: 175px;
+  max-height: 175px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.status{
+  font-size: 24px;
+  font-weight: 200;
+}
+.online{
+  color: green;
+}
+.offline{
+  color: red;
+}
