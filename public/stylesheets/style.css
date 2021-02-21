@@ -113,14 +113,23 @@ button{
 
 
 
-@media (min-width: 480px) {
+@media only screen and (max-device-width: 640px) {
   
+  .center{
+    text-align: center;
+  }
   h1{
     font-weight: 300;
-    font-size: 8rem;
+    font-size: 5rem;
+  }
+  p{
+    font-size: 2rem;
+  }
+  .grid{
+    margin-top: 1rem;
   }
   .status{
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: 300;
   }
   body {
@@ -169,6 +178,6 @@ button{
     width: 65%;
     margin: 0 auto;
     border-radius: 3rem;
-}
+  }
 
 }
