@@ -6,7 +6,11 @@ const isPortReachable = require('is-port-reachable');
 
 let daemons = []
 fs.readFile("daemons.txt", function(err, buf) {
-  daemons = JSON.parse(buf.toString());
+  if (!err) {
+    return false;
+  }else{
+    daemons = JSON.parse(buf.toString());
+  }
 });
 
 router.get('/', function(req, res, next) {
