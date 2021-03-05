@@ -1,6 +1,6 @@
 # About statusd
 
-Statusd is a web application made with ExpressJS to manage network services status by adding it's host and port to check for abailavility.
+Statusd is a web application made with ExpressJS to manage network services status by adding its host and port to check for abailavility.
 
 - [Creator's website](https://www.marcsanchezg.com).
 - [Try systemd](https://systemd.marcsanchezg.com).
