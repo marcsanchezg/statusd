@@ -23,6 +23,7 @@ And then, change the directory to 'statusd' and then install Express with the fo
 
 ```bash
 $ cd statusd
+$ npm install
 $ npm install express
 ```
 
@@ -33,4 +34,30 @@ and now we have statusd installed
 To start statusd, you need to be in the project's directory and start it with:
 ```bash
 $ npm start
+```
+
+## Make it a system daemon
+
+Create the file /lib/systemd/system/systemd.service with the following content
+```bash
+$ nano /lib/systemd/system/systemd.service
+
+[Unit]
+Description=Statusd system daemon
+Documentation=https://github.com/marcsanchezg/statusd
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/dir/to/systemd
+ExecStart=/usr/bin/npm start
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+```
+And then enable and start the service via systemctl
+```bash
+$ sudo systemctl enable systemd.service
+$ sudo systemctl start systemd.service
 ```
