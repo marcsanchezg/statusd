@@ -10,7 +10,7 @@ Statusd is a web application made with ExpressJS to manage network services stat
 Statusd can be run through docker
 First of all, clone this repo into your system:
 ```bash
-$ git clone https://github.com/marcsanchezg/statusd.git
+git clone https://github.com/marcsanchezg/statusd.git
 ```
 And then, run
 ```bash
