@@ -14,8 +14,8 @@ $ git clone https://github.com/marcsanchezg/statusd.git
 ```
 And then, run
 ```bash
-$ docker build . -t msanchezg/statusd
-$ docker run -p 3000:3000 -d msanchezg/statusd
+docker build . -t msanchezg/statusd
+docker run -p 3000:3000 -d msanchezg/statusd
 ```
 
 ## Requirements
@@ -29,15 +29,15 @@ Statusd has small requirements as it's a small web application, the software too
 
 First of all, clone this repo into your system:
 ```bash
-$ git clone https://github.com/marcsanchezg/statusd.git
+git clone https://github.com/marcsanchezg/statusd.git
 ```
 
 And then, change the directory to 'statusd' and then install Express with the following command:
 
 ```bash
-$ cd statusd
-$ npm install
-$ npm install express
+cd statusd
+npm install
+npm install express
 ```
 
 and now we have statusd installed
@@ -46,14 +46,14 @@ and now we have statusd installed
 
 To start statusd, you need to be in the project's directory and start it with:
 ```bash
-$ npm start
+npm start
 ```
 
 ## Make it a system daemon
 
 Create the file /lib/systemd/system/systemd.service with the following content
 ```bash
-$ nano /lib/systemd/system/systemd.service
+nano /lib/systemd/system/systemd.service
 
 [Unit]
 Description=Statusd system daemon
@@ -71,6 +71,6 @@ WantedBy=multi-user.target
 ```
 And then enable and start the service via systemctl
 ```bash
-$ sudo systemctl enable systemd.service
-$ sudo systemctl start systemd.service
+sudo systemctl enable systemd.service
+sudo systemctl start systemd.service
 ```
