@@ -5,6 +5,19 @@ Statusd is a web application made with ExpressJS to manage network services stat
 - [Creator's website](https://www.marcsanchezg.com).
 - [Try systemd](https://systemd.marcsanchezg.com).
 
+## Docker
+
+Statusd can be run through docker
+First of all, clone this repo into your system:
+```bash
+$ git clone https://github.com/marcsanchezg/statusd.git
+```
+And then, run
+```bash
+$ docker build . -t msanchezg/statusd
+$ docker run -p 3000:3000 -d msanchezg/statusd
+```
+
 ## Requirements
 
 Statusd has small requirements as it's a small web application, the software tools you need installed in your system are:
